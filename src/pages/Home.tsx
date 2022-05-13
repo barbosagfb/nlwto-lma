@@ -33,6 +33,9 @@ export function Home(){
         alert('A sala não existe');
         return;
       }
+      if(roomRef.val().endedAt){
+        alert('A sala já foi encerrada.')
+      }
       history(`rooms/${roomCode}`);
     }
 
